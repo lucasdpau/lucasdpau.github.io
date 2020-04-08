@@ -1,0 +1,10 @@
+sources: 
+https://www.ybrikman.com/
+https://caleb-ellis.github.io/
+https://derekinstl.com/projects
+
+About me
+Contacts
+Project description
+Project images
+Layout
