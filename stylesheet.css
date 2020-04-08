@@ -1,17 +1,11 @@
-table{
-    border: 3px solid black;
-    width: 100%;
+header {
+    position: relative;
+    padding: 15px;
+    background-color: #0b0;
 }
 
-td{
-    padding: 10px;
-    border: 1px solid black;
-}
-
-.toprow{
-    background-color: lightgrey;
-    font-weight: bold;
-
+.intro {
+    text-align: center;
 }
 
 footer{
