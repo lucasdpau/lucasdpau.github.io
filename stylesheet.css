@@ -1,7 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px;
+}
+
 header {
-    position: relative;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
     padding: 15px;
     background-color: #0b0;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header a {
+    color: white;
+}
+
+header a:hover {
+    color: black;
+    text-decoration: none;
 }
 
 .intro {
@@ -12,11 +36,36 @@ header {
     text-align: center;
 }
 
-.my-projects {
+.projects-wrapper {
+    margin-top: 30px;
+}
+
+.my-projects-label {
     text-align: center;
 }
 
 .project-card-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.skills-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-item {
     
 }
 
