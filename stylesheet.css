@@ -29,6 +29,7 @@ header a:hover {
 }
 
 .intro {
+    margin-bottom:50px;
     text-align: center;
 }
 
@@ -37,7 +38,7 @@ header a:hover {
 }
 
 .projects-wrapper {
-    margin-top: 30px;
+    padding-top: 65px;
 }
 
 .my-projects-label {
@@ -53,6 +54,11 @@ header a:hover {
 .project-item {
     max-width: 450px;
     margin: 0 auto;
+}
+
+.project-icon {
+    width: 50px;
+    height: auto;
 }
 
 .skills-wrapper {
