@@ -61,6 +61,21 @@ header a:hover {
     height: auto;
 }
 
+.project-icon:hover {
+    width: 100px;
+    opacity: 0.5;
+}
+
+.skills-list-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.skills-item {
+    width: 60px;
+}
+
 .skills-wrapper {
     text-align: center;
     margin-top: 30px;
