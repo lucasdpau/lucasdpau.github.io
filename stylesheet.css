@@ -33,16 +33,20 @@ header {
 }
 
 footer{
-    padding-top: 2em;
-    padding-bottom: 2em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+h5 {
+	margin-top: 0.5em;
 }
 
 .center {
-    text-align: center;
+	text-align: center;
 }
 
 .projects-wrapper {
-    padding-top: 65px;
+	padding-top: 65px;
 }
 
 .project-card-wrapper {
@@ -62,29 +66,40 @@ footer{
 }
 
 .project-icon:hover {
-    width: 100px;
-    opacity: 0.5;
+	width: 100px;
+	opacity: 0.5;
 }
 
 .skills-wrapper {
-    padding-top: 65px;
+	padding-top: 65px;
 }
 
 .skills-list-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+	padding-top: 2em;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .skills-item {
-	width: 60px;
+	width: 80px;
+	height: 100px;
 	margin-right: 10px;
 	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .skills-item > img {
 	width: 60px;
 	height: 60px;
+	opacity: 0.8;
+}
+
+.skills-item > img:hover {
+	width: 80px;
+	height: 80px;
+	opacity: 1;
+	transition: 0.05s;
 }
 
 .contact-wrapper {
@@ -92,7 +107,8 @@ footer{
 }
 
 .contact-item {
-	width: 60px;
+	width: 80px;
+	height: 100px;
 	margin-top: 1em; 
 	margin-right: auto;
 	margin-left: auto; 
@@ -100,4 +116,11 @@ footer{
 
 .contact-image {
 	width: 60px;
+	opacity: 0.8;
+}
+
+.contact-image:hover {
+	width: 80px;
+	opacity: 1;
+	transition: 0.05s;
 }
