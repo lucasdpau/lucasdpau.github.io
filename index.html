@@ -4,16 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="Lucas Pau's portfolio page">
-        <meta>
         <!-- http://getbootstrap.com/docs/4.1/ -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="stylesheet.css" rel="stylesheet">
         <title>
-			LP's Page
-		</title>
+		LP's Page
+	</title>
     </head>
     <body>
-        <header> 
+        <nav> 
             <a href="#top">
 				Top
 			</a>
@@ -26,16 +25,17 @@
             <a href="#contact">
 				Contact
 			</a>
-        </header>
-		<div class="intro">
-			<h1>
-				Lucas Pau
-			</h1>
-			<h3>
-				Developer
-			</h3>
-		</div>
-		<div class="container about-me-wrapper">
+        </nav>
+	<header class="container center">
+		<h1>
+			Lucas Pau
+		</h1>
+		<h3>
+			Developer
+		</h3>
+	</header>
+	<main>
+		<div class="container center">
 			<h3>
 				About Me
 			</h3>
@@ -44,11 +44,9 @@
 			</div>
 		</div>
 			<div class="container projects-wrapper" id="projects">
-				<div class="my-projects-label">
-					<h3>
-						My Projects
-					</h3>
-				</div>
+				<h3 class="center">
+					My Projects
+				</h3>
 				<div class="project-card-wrapper">
 					<div class="card project-item">
 						<div class="card-body">
@@ -110,11 +108,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="container skills-wrapper " id="skills">
+		<div class="container center skills-wrapper" id="skills">
 			<h3>
 				Skills
 			</h3>
-			<div class="languages-wrapper container">
+			<div class="container">
 				<h5>
 					Languages
 				</h5>
@@ -141,7 +139,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="techs-wrapper container">
+			<div class="container">
 				<h5>
 					Frameworks/Technologies
 				</h5>
@@ -192,31 +190,33 @@
 					</div>
 				</div>
 			</div>
-		<div class="contact-wrapper" id="contact">
+		</div>
+		<div class="container center contact-wrapper" id="contact">
 			<h3>Contact</h3>
 			<div class="contact-item">
 				<a href="https://ca.linkedin.com/in/lucas-pau-b708339b">
-					<img src="./images/linkedin-icon.svg">
+					<img src="./images/linkedin-icon.svg" class="contact-image">
 					LinkedIn
 				</a>
 			</div>
 			<div class="contact-item">
 				<a href="https://github.com/lucasdpau">
-					<img src="./images/github-icon.svg">
+					<img src="./images/github-icon.svg" class="contact-image">
 					GitHub
 				</a>
 			</div>
 			<div class="contact-item">
 				<a href="">
-					<img src="./images/envelope-icon.svg">
+					<img src="./images/envelope-icon.svg" class="contact-image">
 					E-mail
 				</a>
 			</div>
 		</div>
-		<footer>
-			<div class="container">
-				Thank you for visiting my webpage.
-			</div>
-		</footer>
+	</main>
+	<footer class="center">
+		<div class="container">
+			Thank you for visiting my webpage.
+		</div>
+	</footer>
     </body>
 </html>
