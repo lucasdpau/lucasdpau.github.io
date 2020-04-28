@@ -46,9 +46,10 @@ h5 {
 	text-align: center;
 }
 
-.projects-wrapper {
+.padding65 {
 	padding-top: 65px;
 }
+
 
 .project-card-wrapper {
     margin-top: 30px;
@@ -71,10 +72,6 @@ h5 {
 
 .project-icon:hover {
 	opacity: 1;
-}
-
-.skills-wrapper {
-	padding-top: 65px;
 }
 
 .skills-list-wrapper {
@@ -117,8 +114,8 @@ h5 {
 	background-color: #888;
 }
 
-.contact-wrapper {
-	padding-top: 65px;
+.contact-list-wrapper {
+	display: flex;
 }
 
 .contact-item {
@@ -131,11 +128,13 @@ h5 {
 
 .contact-image {
 	width: 60px;
+	height: 60px; 
 	opacity: 0.8;
 }
 
 .contact-image:hover {
 	width: 80px;
+	height: 80px;
 	opacity: 1;
 	transition: 0.05s;
 }
