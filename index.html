@@ -117,7 +117,7 @@
 				<h5>
 					Languages
 				</h5>
-				<div class="skills-list-wrapper">
+				<div class="card skills-list-wrapper" id="language-wrapper">
 					<div class="skills-item">
 						<div class="skills-icon-container">
 							<img src="./images/python-icon.svg" class="skills-icon">
@@ -164,7 +164,7 @@
 				<h5>
 					Frameworks/Technologies
 				</h5>
-				<div class="skills-list-wrapper">
+				<div class="card skills-list-wrapper">
 					<div class="skills-item">
 						<div class="skills-icon-container">
 							<img src="./images/git-icon.svg" class="skills-icon">
@@ -259,7 +259,7 @@
 		<div class="container center padding65" id="contact">
 			<h3>Contact</h3>
 			<p>lucasdpau@gmail.com</p>
-			<div class="contact-list-wrapper">
+			<div class="card contact-list-wrapper">
 				<div class="contact-item">
 					<a href="https://ca.linkedin.com/in/lucas-pau-b708339b">
 						<img src="./images/linkedin-icon.svg" class="contact-image">
@@ -287,4 +287,19 @@
 		</div>
 	</footer>
     </body>
+	<script>
+		var langToggle = 0;
+		const lang = document.getElementById("language-wrapper");
+		const button = document.getElementById("skills");
+		button.onclick = function() {
+			if (langToggle == 0) { 
+				lang.classList.add("invisible");
+				langToggle = 1;
+			}
+			else {
+				lang.classList.remove("invisible");
+				langToggle = 0;	
+			}
+			};
+	</script>
 </html>
