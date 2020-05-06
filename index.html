@@ -114,7 +114,7 @@
 				Skills
 			</h3>
 			<div class="container">
-				<h5>
+				<h5 id="languages">
 					Languages
 				</h5>
 				<div class="card skills-list-wrapper" id="language-wrapper">
@@ -161,10 +161,10 @@
 				</div>
 			</div>
 			<div class="container">
-				<h5>
+				<h5 id="techs">
 					Frameworks/Technologies
 				</h5>
-				<div class="card skills-list-wrapper">
+				<div class="card skills-list-wrapper" id="techs-wrapper">
 					<div class="skills-item">
 						<div class="skills-icon-container">
 							<img src="./images/git-icon.svg" class="skills-icon">
@@ -287,19 +287,6 @@
 		</div>
 	</footer>
     </body>
-	<script>
-		var langToggle = 0;
-		const lang = document.getElementById("language-wrapper");
-		const button = document.getElementById("skills");
-		button.onclick = function() {
-			if (langToggle == 0) { 
-				lang.classList.add("invisible");
-				langToggle = 1;
-			}
-			else {
-				lang.classList.remove("invisible");
-				langToggle = 0;	
-			}
-			};
+	<script src="scripts.js">
 	</script>
 </html>
