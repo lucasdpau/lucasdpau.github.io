@@ -3,8 +3,10 @@
 }
 
 body {
-	background-image: linear-gradient(#e0ffff, #f6ffff);
+	background-image: linear-gradient(#e0ffff, #f0ffff);
     padding-top: 80px;
+    font-family: monospace;
+    font-size: 1.1em;
 }
 
 nav {
@@ -13,7 +15,7 @@ nav {
 	top: 0;
 	z-index: 100;
 	padding: 15px;
-	background-color: #0b0;
+	background-color: #09f;
 	display: flex;
 	justify-content: space-evenly;
 	font-weight: bold;
