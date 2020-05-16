@@ -2,10 +2,10 @@ var langToggle = 0;
 var techToggle = 0;
 
 const lang = document.getElementById("language-wrapper");
-const buttonLang = document.getElementById("languages");
+const buttonLang = document.getElementById("language_minimize");
 
 const tech = document.getElementById("techs-wrapper");
-const buttonTech = document.getElementById("techs");
+const buttonTech = document.getElementById("techs_minimize");
 
 buttonTech.onclick = function() {
 	if (techToggle == 0) { 
