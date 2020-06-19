@@ -67,12 +67,22 @@ h5 {
     flex-wrap: wrap;
 }
 
+.project_content_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .project-item {
     max-width: 450px;
     margin: 0 auto;
 	box-shadow: 1px 1px 1px #000;
 }
 
+.project_link_wrapper {
+	display: flex;
+	justify-content: space-evenly;
+}
 
 .project-icon {
 	width: 50px;
