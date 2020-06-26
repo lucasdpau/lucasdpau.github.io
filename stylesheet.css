@@ -36,6 +36,12 @@ header {
     margin-bottom:50px;
 }
 
+canvas {
+	width: 500px;
+	height: 300px;
+	border:1px solid #000000;
+}
+
 footer {
 	background-color: #555;
 	color: #fff;

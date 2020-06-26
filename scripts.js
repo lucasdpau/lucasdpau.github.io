@@ -32,3 +32,16 @@ buttonTech.onclick = function() {
 		techToggle = 0;	
 		}
 	};
+
+const bubbleCanvas = document.getElementById("bubble").getContext('2d');
+let numberOfValues = 4;
+const bubbleValueArray = [];
+for (let i=0; i< numberOfValues; i++){
+	bubbleValueArray.push(i);
+}
+for (let i=1; i <= bubbleValueArray.length; i++){
+	bubbleCanvas.strokeStyle = 'rgba(0,0,0,1)';
+	bubbleCanvas.strokeRect(i*20, 150, 20, -i*20);
+	bubbleCanvas.fillStyle = 'rgba(100,100,200,1)';
+	bubbleCanvas.fillRect(i*20, 150, 20, -i*20);
+}
