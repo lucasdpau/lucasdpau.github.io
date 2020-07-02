@@ -49,6 +49,10 @@ footer {
 	padding-bottom: 2em;
 }
 
+h1 {
+	font-size: 5rem;
+}
+
 h5 {
 	padding-top: 0.5em;
 }
@@ -60,6 +64,11 @@ h5 {
 
 .center {
 	text-align: center;
+}
+
+
+.landing {
+	height: 100vh;
 }
 
 .padding65 {
