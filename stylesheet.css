@@ -72,6 +72,9 @@ h5 {
 }
 .landing_name {
 	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .scroll_from_landing {
