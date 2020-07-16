@@ -129,6 +129,10 @@ h5 {
 	justify-content: space-between;
 }
 
+.project-image {
+	margin-bottom: 20px
+}
+
 .project-image img {
 	width: 100%;
 }
