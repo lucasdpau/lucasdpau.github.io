@@ -32,3 +32,25 @@ buttonTech.onclick = function() {
 		techToggle = 0;	
 		}
 	};
+
+const cheats = {'iddqd':0, 'idkfa':0, 'rosebud':0};
+document.addEventListener("keydown", key_input);
+
+function key_input(event) {
+	// uses cheats object to keep track of keypresses
+	Object.keys(cheats).forEach(
+		function (key) {
+	// automatically make all inputs lowercase 
+			if (event.key.toLowerCase() == key[cheats[key]]) {
+				cheats[key] += 1;
+				if (cheats[key] == key.length) {
+					console.log(key);
+					cheats[key] = 0;
+				}
+			} 
+			else {
+				cheats[key] = 0;
+			}
+		}
+	);
+}
