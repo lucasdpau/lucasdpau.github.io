@@ -33,24 +33,45 @@ buttonTech.onclick = function() {
 		}
 	};
 
-const cheats = {'iddqd':0, 'idkfa':0, 'rosebud':0};
+const cheats = {'iddqd': {'index':0, 'func':toggleInvertGrayscale}, 
+				'idkfa': {'index':0, 'func': toggleInvertGrayscale }, 
+				'rosebud': {'index':0, 'func': gainThousandDollars }};
 document.addEventListener("keydown", key_input);
 
 function key_input(event) {
 	// uses cheats object to keep track of keypresses
+	// don't confuse keyboard key and object key!
 	Object.keys(cheats).forEach(
-		function (key) {
+		function (cheatsKey) {
 	// automatically make all inputs lowercase 
-			if (event.key.toLowerCase() == key[cheats[key]]) {
-				cheats[key] += 1;
-				if (cheats[key] == key.length) {
-					console.log(key);
-					cheats[key] = 0;
+			if (event.key.toLowerCase() == cheatsKey[cheats[cheatsKey]['index'] ]) {
+				cheats[cheatsKey]['index']  += 1;
+				if (cheats[cheatsKey]['index']  == cheatsKey.length) {
+	// call the function assigned to the cheat
+					cheats[cheatsKey]['func']();
+					cheats[cheatsKey]['index'] = 0;
 				}
 			} 
 			else {
-				cheats[key] = 0;
+				cheats[cheatsKey]['index']  = 0;
 			}
 		}
 	);
+}
+
+function toggleInvertGrayscale() {
+	const topHTMLEleClasses = document.getElementById("html").classList;
+	const iddqdbarClasses = document.getElementById("iddqdbar").classList;
+	if (topHTMLEleClasses.contains("iddqd")) {
+		topHTMLEleClasses.remove("iddqd");
+		iddqdbarClasses.add("invisible");
+	} 
+	else {
+		topHTMLEleClasses.add("iddqd");
+		iddqdbarClasses.remove("invisible");
+	}
+}
+
+function gainThousandDollars() {
+	
 }
