@@ -1,12 +1,6 @@
-var langToggle = 0;
-var techToggle = 0;
-
 const lang = document.getElementById("language-wrapper");
 const buttonLang = document.getElementById("language_minimize");
-
-const tech = document.getElementById("techs-wrapper");
-const buttonTech = document.getElementById("techs_minimize");
-
+var langToggle = 0;
 buttonLang.onclick = function() {
 	if (langToggle == 0) { 
 		buttonLang.innerHTML = '[+]'
@@ -20,6 +14,9 @@ buttonLang.onclick = function() {
 		}
 	};
 
+const tech = document.getElementById("techs-wrapper");
+const buttonTech = document.getElementById("techs_minimize");
+var techToggle = 0;
 buttonTech.onclick = function() {
 	if (techToggle == 0) { 
 		buttonTech.innerHTML = '[+]'
@@ -40,7 +37,6 @@ document.addEventListener("keydown", key_input);
 
 function key_input(event) {
 	// uses cheats object to keep track of keypresses
-	// don't confuse keyboard key and object key!
 	Object.keys(cheats).forEach(
 		function (cheatsKey) {
 	// automatically make all inputs lowercase 
