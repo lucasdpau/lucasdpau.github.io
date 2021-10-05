@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <site-header />
+        <site-header v-on:changePageEvent="changePageContent($event)" />
         <component v-bind:is="pageContent" />
         <site-footer />
     </div>
@@ -30,6 +30,12 @@ export default {
 </script>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -40,6 +46,5 @@ export default {
     flex-wrap: wrap;
     text-align: center;
     color: #111;
-    margin-top: 60px;
 }
 </style>

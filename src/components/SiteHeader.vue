@@ -1,10 +1,10 @@
 <template>
     <header id="header">
         <nav>
-            <div>Home</div>
-            <div>Skills</div>
-            <div>Projects</div>
-            <div>Contact</div>
+            <div v-on:click="handleNav('home')">Home</div>
+            <!-- <div>Skills</div> -->
+            <div v-on:click="handleNav('projects')">Projects</div>
+            <div v-on:click="handleNav('contact')">Contact</div>
         </nav>
     </header>
 </template>
@@ -12,7 +12,11 @@
 <script lang="ts">
 export default {
     name: "Header",
-    methods: {},
+    methods: {
+        handleNav: function (newPage: string) {
+            this.$emit("changePageEvent", newPage);
+        },
+    },
     data: function () {
         return {};
     },
@@ -32,5 +36,9 @@ nav {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+}
+
+nav div {
+    cursor: pointer;
 }
 </style>
