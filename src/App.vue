@@ -1,29 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+    <div id="app">
+        <site-header />
+        <component v-bind:is="pageContent" />
+        <site-footer />
+    </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import Contact from "./components/Contact.vue";
+import Home from "./components/Home.vue";
+import Projects from "./components/Projects.vue";
+import SiteFooter from "./components/SiteFooter.vue";
+import SiteHeader from "./components/SiteHeader.vue";
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+export default {
+    name: "App",
+    components: { SiteFooter, SiteHeader, home: Home, contact: Contact, projects: Projects },
+	methods: {
+		changePageContent: function(newPage: string) {
+			this.pageContent = newPage;
+		}
+	},
+    data: function () {
+        return {
+            pageContent: "home",
+        };
+    },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    color: #111;
+    margin-top: 60px;
 }
 </style>
