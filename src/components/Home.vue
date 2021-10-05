@@ -1,21 +1,23 @@
 <template>
     <section id="Home">
-        <skill-icons header="Languages" v-bind:skills="languages" />
-        <skill-icons
-            v-if="false"
-            header="Technologies"
-            v-bind:skills="skills"
-        />
+        <section>
+            About me:
+            I am Lucas and I am a person.
+        </section>
+        <section>
+            <skill-icons header="Languages" v-bind:skills="languages" />
+            <skill-icons header="Technologies" v-bind:skills="skills" />
+        </section>
     </section>
 </template>
 
 <script lang="ts">
-import SkillIcons from "./SkillIcons.vue";
+import SkillIcons from "./Skills.vue";
 import { LANGUAGES, SKILLS } from "../content";
 
 export default {
     name: "Home",
-    components: {SkillIcons},
+    components: { SkillIcons },
     methods: {},
     data: function () {
         return {

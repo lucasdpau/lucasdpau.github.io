@@ -2,9 +2,15 @@
     <section id="contact">
         <div>Contact me</div>
         <div id="contact-item-container">
-            <div>LinkedIn</div>
-            <div>Github</div>
-            <div>E-Mail</div>
+            <a
+                v-bind:href="item.link"
+                v-for="(item, index) in contactInfo"
+                :key="index"
+                class="contact-item"
+            >
+                <img v-bind:src="item.imagePath" class='item-image' />
+                <div>{{ item.label }}</div>
+            </a>
         </div>
     </section>
 </template>
@@ -16,7 +22,7 @@ export default {
     methods: {},
     data: function () {
         return {
-            contactInfo: CONTACT_INFO
+            contactInfo: CONTACT_INFO,
         };
     },
 };
@@ -25,5 +31,15 @@ export default {
 <style scoped>
 #contact-item-container {
     display: flex;
+}
+
+.contact-item {
+    height: 100px;
+    width: 100px;
+}
+
+.item-image {
+    height: 70px;
+    width: 70px;
 }
 </style>
