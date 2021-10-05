@@ -7,7 +7,11 @@
                 :key="index"
                 class="skill-item"
             >
-                <img v-bind:src="skill.imagePath" class="skill-icon" />
+                <img
+                    v-bind:src="skill.imagePath"
+                    v-bind:alt="skill.name"
+                    class="skill-icon"
+                />
                 {{ skill.name }}
             </div>
         </div>

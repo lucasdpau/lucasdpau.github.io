@@ -1,15 +1,9 @@
 <template>
-    <footer id="footer">Footer</footer>
+    <footer id="footer">Thank you for visiting my webpage.</footer>
 </template>
 
 <script lang="ts">
-export default {
-    name: "Footer",
-    methods: {},
-    data: function () {
-        return {};
-    },
-};
+export default {}
 </script>
 
 <style scoped>
@@ -17,6 +11,7 @@ export default {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 50px 0px;
     background-color: #111;
     color: #fff;
 }

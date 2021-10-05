@@ -1,24 +1,19 @@
 <template>
     <header id="header">
         <nav>
-            <div v-on:click="handleNav('home')">Home</div>
-            <!-- <div>Skills</div> -->
-            <div v-on:click="handleNav('projects')">Projects</div>
-            <div v-on:click="handleNav('contact')">Contact</div>
+            <div v-on:click="handleNav('Home')">Home</div>
+            <div v-on:click="handleNav('Projects')">Projects</div>
+            <div v-on:click="handleNav('Contact')">Contact</div>
         </nav>
     </header>
 </template>
 
 <script lang="ts">
 export default {
-    name: "Header",
     methods: {
-        handleNav: function (newPage: string) {
+        handleNav(newPage: string): void {
             this.$emit("changePageEvent", newPage);
         },
-    },
-    data: function () {
-        return {};
     },
 };
 </script>
@@ -28,6 +23,7 @@ export default {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 20px 0px;
     background-color: #111;
     color: #fff;
 }

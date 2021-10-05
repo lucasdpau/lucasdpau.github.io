@@ -1,8 +1,12 @@
 <template>
     <section id="Home">
         <section>
-            About me:
-            I am Lucas and I am a person.
+            My name is Lucas Pau, and I'm a self-taught developer and health
+            care worker based in Toronto, Canada. Always willing to learn more
+            and take on a challenge.
+        </section>
+        <section>
+            Blog stuff here
         </section>
         <section>
             <skill-icons header="Languages" v-bind:skills="languages" />

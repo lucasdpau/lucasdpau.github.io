@@ -10,20 +10,20 @@
 import Contact from "./components/Contact.vue";
 import Home from "./components/Home.vue";
 import Projects from "./components/Projects.vue";
-import SiteFooter from "./components/SiteFooter.vue";
-import SiteHeader from "./components/SiteHeader.vue";
+import SiteFooter from "./components/Footer.vue";
+import SiteHeader from "./components/Header.vue";
 
 export default {
     name: "App",
-    components: { SiteFooter, SiteHeader, home: Home, contact: Contact, projects: Projects },
-	methods: {
-		changePageContent: function(newPage: string) {
-			this.pageContent = newPage;
-		}
-	},
+    components: { SiteFooter, SiteHeader, Home, Contact, Projects },
+    methods: {
+        changePageContent: function (newPage: string) {
+            this.pageContent = newPage;
+        },
+    },
     data: function () {
         return {
-            pageContent: "home",
+            pageContent: "Home",
         };
     },
 };
