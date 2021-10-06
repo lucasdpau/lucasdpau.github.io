@@ -20,7 +20,7 @@ export const SKILLS: Array<ISkillsIcon> = [
     { name: 'Flutter', imagePath: require('@/assets/images/flutter-icon.svg') },
     { name: 'SQL', imagePath: require('@/assets/images/PostgreSQL-icon.svg') },
     { name: 'Jest', imagePath: require('@/assets/images/jest-icon.svg') },
-    { name: 'Firebase', imagePath: '' },
+    { name: 'Firebase', imagePath: require('@/assets/images/firebase-icon.svg') },
 ];
 
 export const LANGUAGES: Array<ISkillsIcon> = [
