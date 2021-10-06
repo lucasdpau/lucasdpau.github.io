@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <site-header v-on:changePageEvent="changePageContent($event)" />
-        <component v-bind:is="pageContent" />
+        <transition name="slide">
+            <component v-bind:is="pageContent" />
+        </transition>
         <site-footer />
     </div>
 </template>
@@ -12,12 +14,13 @@ import Home from "./components/Home.vue";
 import Projects from "./components/Projects.vue";
 import SiteFooter from "./components/Footer.vue";
 import SiteHeader from "./components/Header.vue";
+import {pageContent} from './types';
 
 export default {
     name: "App",
     components: { SiteFooter, SiteHeader, Home, Contact, Projects },
     methods: {
-        changePageContent: function (newPage: string) {
+        changePageContent: function (newPage: pageContent) {
             this.pageContent = newPage;
         },
     },
@@ -46,5 +49,13 @@ export default {
     flex-wrap: wrap;
     text-align: center;
     color: #111;
+}
+
+.slide-enter {
+    transform: translate(100vw, 0);
+}
+
+.slide-enter-active {
+    transition: 0.5s;
 }
 </style>

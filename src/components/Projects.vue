@@ -1,6 +1,6 @@
 <template>
     <section id="projects">
-        
+        Hello this is the market place
     </section>
 </template>
 

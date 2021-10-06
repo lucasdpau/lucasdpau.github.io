@@ -9,9 +9,11 @@
 </template>
 
 <script lang="ts">
+import { pageContent } from "../types";
+
 export default {
     methods: {
-        handleNav(newPage: string): void {
+        handleNav(newPage: pageContent): void {
             this.$emit("changePageEvent", newPage);
         },
     },

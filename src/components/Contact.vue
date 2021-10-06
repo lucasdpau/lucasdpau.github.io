@@ -1,6 +1,6 @@
 <template>
     <section id="contact">
-        <div>Contact me</div>
+        <div>Contact at</div>
         <div id="contact-item-container">
             <a
                 v-bind:href="item.link"

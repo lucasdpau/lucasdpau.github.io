@@ -1,0 +1,1 @@
+export type pageContent = 'Contact' | 'Projects' | 'Home'; 

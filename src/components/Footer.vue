@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer">Thank you for visiting my webpage.</footer>
+    <footer id="footer">Footer here</footer>
 </template>
 
 <script lang="ts">
