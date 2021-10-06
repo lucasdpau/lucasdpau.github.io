@@ -17,7 +17,7 @@ export default {
         return {};
     },
     computed: {
-        formatDescription: function() {
+        formatDescription: function (): string {
             const truncatedText = `${this.post.description.substring(
                 0,
                 256
@@ -25,7 +25,7 @@ export default {
             const regex = /(<([^>]+)>)/gi;
             return truncatedText.replace(regex, "");
         },
-        formatDate: function() {
+        formatDate: function (): string {
             return new Date(this.post.pubDate).toDateString();
         },
     },

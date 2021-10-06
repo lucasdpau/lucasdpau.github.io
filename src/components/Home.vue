@@ -23,8 +23,9 @@
 import SkillIcons from "./Skills.vue";
 import PostPreviewCard from "./PostPreviewCard.vue";
 import { LANGUAGES, SKILLS } from "../content";
+import { IMediumBlogPost, IHomeData } from "../types";
 
-const fetchMediumFeed = async function () {
+const fetchMediumFeed = async function (): Promise<Array<IMediumBlogPost>> {
     try {
         const res = await fetch(
             "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40lucasdpau"
@@ -47,14 +48,14 @@ export default {
         PostPreviewCard,
     },
     methods: {},
-    data: function () {
+    data: function (): IHomeData {
         return {
             languages: LANGUAGES,
             skills: SKILLS,
             posts: [],
         };
     },
-    created: async function () {
+    created: async function (): Promise<void> {
         this.posts = await fetchMediumFeed();
     },
 };
