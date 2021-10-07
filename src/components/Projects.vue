@@ -3,6 +3,8 @@
 </template>
 
 <script lang="ts">
+import { PROJECTS } from "../content";
+
 export default {
     name: "Projects",
     methods: {},

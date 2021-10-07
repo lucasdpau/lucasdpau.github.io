@@ -8,7 +8,7 @@
                 :key="index"
                 class="contact-item"
             >
-                <img v-bind:src="item.imagePath" class='item-image' />
+                <img v-bind:src="item.imagePath" class="contact-item-image" />
                 <div>{{ item.label }}</div>
             </a>
         </div>
@@ -29,6 +29,10 @@ export default {
 </script>
 
 <style scoped>
+#contact {
+    font-size: 1.4rem;
+}
+
 #contact-item-container {
     display: flex;
 }
@@ -38,8 +42,9 @@ export default {
     width: 100px;
 }
 
-.item-image {
+.contact-item-image {
     height: 70px;
     width: 70px;
 }
+
 </style>

@@ -16,7 +16,7 @@ import Home from "./components/Home.vue";
 import Projects from "./components/Projects.vue";
 import SiteFooter from "./components/Footer.vue";
 import SiteHeader from "./components/Header.vue";
-import { pageContent } from "./types";
+import { IAppData, pageContent } from "./types";
 
 export default {
     name: "App",
@@ -26,7 +26,7 @@ export default {
             this.pageContent = newPage;
         },
     },
-    data: function () {
+    data: function (): IAppData {
         return {
             pageContent: "Home",
         };
@@ -41,6 +41,10 @@ export default {
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -49,6 +53,7 @@ export default {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    overflow-x: hidden;
     text-align: center;
     color: #111;
 }

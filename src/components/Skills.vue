@@ -46,6 +46,7 @@ export default {
     align-items: center;
     width: 100px;
     height: 100px;
+    font-size: 1.4rem;
 }
 
 .skill-icon {
@@ -55,7 +56,7 @@ export default {
 }
 
 .skill-icon:hover {
-    height: 100px;
+    height: 120px;
     width: 100px;
     opacity: 1;
     transition: 0.05s;

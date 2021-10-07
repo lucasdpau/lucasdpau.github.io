@@ -1,5 +1,9 @@
 export type pageContent = 'Contact' | 'Projects' | 'Home'; 
 
+export interface IAppData {
+    pageContent: pageContent;
+}
+
 export interface IMediumBlogPost {
     title: string;
     pubDate: string;

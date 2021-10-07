@@ -1,6 +1,7 @@
 <template>
     <div class="medium-post-card">
         <a v-bind:href="post.link">
+            <!-- <img src=''> -->
             <h3>{{ post.title }}</h3>
             <div class='post-publish-date'>{{ formatDate }}</div>
             <div class='post-content'>{{ formatDescription }}</div>
@@ -38,7 +39,7 @@ a {
     color: black;
 }
 h3 {
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .medium-post-card {
@@ -55,11 +56,11 @@ h3 {
 }
 
 .post-publish-date{
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #333;
 }
 
 .post-content{
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 </style>

@@ -1,14 +1,19 @@
 <template>
     <section id="Home">
-        <section>
+        <section id="intro">
             My name is Lucas Pau, and I'm a self-taught developer and health
-            care professional based in Toronto, Canada. Always willing to learn more
-            and take on a challenge.
+            care professional based in Toronto, Canada. I used to work full time
+            as a pharmacy manager, and although the job was stable I felt that
+            the development of my professional skills and my career had stalled.
+            Since personal growth is important to me, I decided to take a risk
+            and switch into a career in software development.
         </section>
         <section id="medium-posts">
-            <h1>Posts from Medium</h1>
+            <h1>Recent blog posts</h1>
             <div id="post-preview-container">
-                <div v-if="fetchAttempted && posts.length < 1"> Posts Unavailable</div>
+                <div v-if="fetchAttempted && posts.length < 1">
+                    Posts Unavailable
+                </div>
                 <post-preview-card
                     v-for="(post, index) in posts"
                     :key="index"
@@ -26,7 +31,7 @@
 <script lang="ts">
 import SkillIcons from "./Skills.vue";
 import PostPreviewCard from "./PostPreviewCard.vue";
-import { LANGUAGES, SKILLS } from "../content";
+import { LANGUAGES, MEDIUM_JSON_FEED, SKILLS } from "../content";
 import { IMediumBlogPost, IHomeData } from "../types";
 
 export default {
@@ -38,9 +43,7 @@ export default {
     methods: {
         fetchMediumFeed: async function (): Promise<Array<IMediumBlogPost>> {
             try {
-                const res = await fetch(
-                    "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40lucasdpau"
-                );
+                const res = await fetch(MEDIUM_JSON_FEED);
                 if (res.status === 200) {
                     const data = await res.json();
                     this.fetchAttempted = true;
@@ -70,13 +73,18 @@ export default {
 
 <style scoped>
 h1 {
-    font-size: 32px;
+    font-size: 3rem;
 }
+
+#intro {
+    font-size: 1.6rem;
+}
+
 #medium-posts {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 30px;
+    gap: 2rem;
+    padding-top: 3rem;
 }
 
 #post-preview-container {
