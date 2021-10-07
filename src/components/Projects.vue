@@ -1,7 +1,5 @@
 <template>
-    <section id="projects">
-        Hello this is the market place
-    </section>
+    <section id="projects">Hello this is the market place</section>
 </template>
 
 <script lang="ts">

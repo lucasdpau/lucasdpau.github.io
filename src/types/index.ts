@@ -15,5 +15,6 @@ export interface IMediumBlogPost {
 export interface IHomeData {
     languages: any;
     skills: any;
+    fetchAttempted: boolean;
     posts: Array<IMediumBlogPost>
 }

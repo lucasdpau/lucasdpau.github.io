@@ -1,9 +1,11 @@
 <template>
     <div id="app">
         <site-header v-on:changePageEvent="changePageContent($event)" />
-        <transition name="slide">
-            <component v-bind:is="pageContent" />
-        </transition>
+        <main id='page-content'>
+            <transition name="slide">
+                <component v-bind:is="pageContent" />
+            </transition>
+        </main>
         <site-footer />
     </div>
 </template>
@@ -14,7 +16,7 @@ import Home from "./components/Home.vue";
 import Projects from "./components/Projects.vue";
 import SiteFooter from "./components/Footer.vue";
 import SiteHeader from "./components/Header.vue";
-import {pageContent} from './types';
+import { pageContent } from "./types";
 
 export default {
     name: "App",
@@ -49,6 +51,10 @@ export default {
     flex-wrap: wrap;
     text-align: center;
     color: #111;
+}
+
+#page-content {
+    height: 100vh;
 }
 
 .slide-enter {

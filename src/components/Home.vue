@@ -2,15 +2,19 @@
     <section id="Home">
         <section>
             My name is Lucas Pau, and I'm a self-taught developer and health
-            care worker based in Toronto, Canada. Always willing to learn more
+            care professional based in Toronto, Canada. Always willing to learn more
             and take on a challenge.
         </section>
-        <section id="post-preview-container">
-            <post-preview-card
-                v-for="(post, index) in posts"
-                :key="index"
-                v-bind:post="post"
-            />
+        <section id="medium-posts">
+            <h1>Posts from Medium</h1>
+            <div id="post-preview-container">
+                <div v-if="fetchAttempted && posts.length < 1"> Posts Unavailable</div>
+                <post-preview-card
+                    v-for="(post, index) in posts"
+                    :key="index"
+                    v-bind:post="post"
+                />
+            </div>
         </section>
         <section>
             <skill-icons header="Languages" v-bind:skills="languages" />
@@ -25,43 +29,56 @@ import PostPreviewCard from "./PostPreviewCard.vue";
 import { LANGUAGES, SKILLS } from "../content";
 import { IMediumBlogPost, IHomeData } from "../types";
 
-const fetchMediumFeed = async function (): Promise<Array<IMediumBlogPost>> {
-    try {
-        const res = await fetch(
-            "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40lucasdpau"
-        );
-        if (res.status === 200) {
-            const data = await res.json();
-            return data.items.slice(0, 3);
-        } else {
-            throw res.status;
-        }
-    } catch (err) {
-        return [];
-    }
-};
-
 export default {
     name: "Home",
     components: {
         SkillIcons,
         PostPreviewCard,
     },
-    methods: {},
+    methods: {
+        fetchMediumFeed: async function (): Promise<Array<IMediumBlogPost>> {
+            try {
+                const res = await fetch(
+                    "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40lucasdpau"
+                );
+                if (res.status === 200) {
+                    const data = await res.json();
+                    this.fetchAttempted = true;
+                    return data.items.slice(0, 3);
+                } else {
+                    throw res.status;
+                }
+            } catch (err) {
+                this.fetchAttempted = true;
+                return [];
+            }
+        },
+    },
     data: function (): IHomeData {
         return {
             languages: LANGUAGES,
             skills: SKILLS,
+            fetchAttempted: false,
             posts: [],
         };
     },
     created: async function (): Promise<void> {
-        this.posts = await fetchMediumFeed();
+        this.posts = await this.fetchMediumFeed();
     },
 };
 </script>
 
 <style scoped>
+h1 {
+    font-size: 32px;
+}
+#medium-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+}
+
 #post-preview-container {
     display: flex;
     flex-wrap: wrap;

@@ -15,6 +15,7 @@ export default {
     methods: {
         handleNav(newPage: pageContent): void {
             this.$emit("changePageEvent", newPage);
+            document.getElementsByTagName('title')[0].textContent = `Lucas | ${newPage}`;
         },
     },
 };
