@@ -1,21 +1,5 @@
-interface ISkillsIcon {
-    name: string;
-    imagePath: string;
-}
+import { ISkillsIcon, IProjects, IContactInfo } from '../types'
 
-interface IProjects {
-    name: string;
-    imagePath: string;
-    description: string;
-    link: string;
-    liveLink?: string;
-}
-
-interface IContactInfo {
-    label: string;
-    imagePath: string;
-    link: string;
-}
 
 export const SKILLS: Array<ISkillsIcon> = [
     { name: 'Vue', imagePath: require('@/assets/images/vue-icon.svg') },
@@ -45,9 +29,9 @@ export const PROJECTS: Array<IProjects> = [
 ];
 
 export const CONTACT_INFO: Array<IContactInfo> = [
-    { label: 'LinkedIn', imagePath: require('@/assets/images/linkedin-icon.svg'), link: 'https://www.linkedin.com/in/lucasdpau' },
-    { label: 'Github', imagePath: require('@/assets/images/github-icon.svg'), link: 'https://github.com/lucasdpau' },
-    { label: 'E-Mail', imagePath: require('@/assets/images/envelope-icon.svg'), link: 'mailto:lucasdpau@gmail.com' },
+    { name: 'LinkedIn', imagePath: require('@/assets/images/linkedin-icon.svg'), link: 'https://www.linkedin.com/in/lucasdpau' },
+    { name: 'Github', imagePath: require('@/assets/images/github-icon.svg'), link: 'https://github.com/lucasdpau' },
+    { name: 'E-Mail', imagePath: require('@/assets/images/envelope-icon.svg'), link: 'mailto:lucasdpau@gmail.com' },
 ];
 
 export const MEDIUM_JSON_FEED = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40lucasdpau";

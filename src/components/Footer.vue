@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer">Footer here</footer>
+    <footer id="footer">&copy; Lucas Pau</footer>
 </template>
 
 <script lang="ts">

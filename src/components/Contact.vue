@@ -1,6 +1,6 @@
 <template>
     <section id="contact">
-        <div>Contact at</div>
+        <h1>Contact me at</h1>
         <div id="contact-item-container">
             <a
                 v-bind:href="item.link"
@@ -9,7 +9,7 @@
                 class="contact-item"
             >
                 <img v-bind:src="item.imagePath" class="contact-item-image" />
-                <div>{{ item.label }}</div>
+                <div>{{ item.name }}</div>
             </a>
         </div>
     </section>

@@ -1,11 +1,12 @@
 <template>
     <div id="app">
         <site-header v-on:changePageEvent="changePageContent($event)" />
-        <main id='page-content'>
+        <main id="page-content">
             <transition name="slide">
                 <component v-bind:is="pageContent" />
             </transition>
         </main>
+        <contact />
         <site-footer />
     </div>
 </template>

@@ -1,12 +1,20 @@
 <template>
     <section id="Home">
         <section id="intro">
-            My name is Lucas Pau, and I'm a self-taught developer and health
-            care professional based in Toronto, Canada. I used to work full time
-            as a pharmacy manager, and although the job was stable I felt that
-            the development of my professional skills and my career had stalled.
-            Since personal growth is important to me, I decided to take a risk
-            and switch into a career in software development.
+            <h1>Intro</h1>
+            <p>
+                My name is Lucas Pau, and I'm a self-taught developer and health
+                care professional based in Toronto, Canada. I used to work full
+                time as a pharmacy manager, and although the job was stable I
+                felt that the development of my professional skills and my
+                career had stalled. Personal growth is important to me, so I
+                decided to take a risk and switch into a career in software
+                development.
+            </p>
+            <p>
+                When I'm not working, you can usually find me enjoying video
+                games, growing plants, or taking care of my two cats.
+            </p>
         </section>
         <section id="medium-posts">
             <h1>Recent blog posts</h1>
@@ -76,7 +84,13 @@ h1 {
     font-size: 3rem;
 }
 
+p {
+    padding: 1rem 0;
+    text-align: start;
+}
+
 #intro {
+    width: 50%;
     font-size: 1.6rem;
 }
 
