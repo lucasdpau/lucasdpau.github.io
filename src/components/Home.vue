@@ -1,7 +1,7 @@
 <template>
     <section id="home">
         <section id="intro">
-            <h1>Intro</h1>
+            <h1>About me</h1>
             <p>
                 My name is Lucas, and I'm a self-taught developer and health
                 care professional based in Toronto, Canada. I used to work full
@@ -18,10 +18,10 @@
         </section>
         <section id="medium-posts">
             <h1>Recent blog posts</h1>
+            <div id="posts-unavailable" v-if="fetchAttempted && posts.length < 1">
+                Posts Unavailable
+            </div>
             <div id="post-preview-container">
-                <div v-if="fetchAttempted && posts.length < 1">
-                    Posts Unavailable
-                </div>
                 <post-preview-card
                     v-for="(post, index) in posts"
                     :key="index"
@@ -100,6 +100,7 @@ p {
 
 #intro {
     width: 50%;
+    padding: 2rem 0;
     min-width: 30rem;
     font-size: 1.6rem;
 }
@@ -109,6 +110,10 @@ p {
     flex-direction: column;
     gap: 2rem;
     padding-top: 3rem;
+}
+
+#posts-unavailable {
+    font-size: 3rem;
 }
 
 #post-preview-container {
