@@ -30,9 +30,15 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+}
+
 .skills-section {
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
 }
 .icon-list {
     display: flex;

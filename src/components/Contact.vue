@@ -29,12 +29,17 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
 #contact {
     font-size: 1.4rem;
 }
 
 #contact-item-container {
     display: flex;
+    justify-content: center;
 }
 
 .contact-item {

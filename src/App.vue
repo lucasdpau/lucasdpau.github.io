@@ -6,13 +6,11 @@
                 <component v-bind:is="pageContent" />
             </transition>
         </main>
-        <contact />
         <site-footer />
     </div>
 </template>
 
 <script lang="ts">
-import Contact from "./components/Contact.vue";
 import Home from "./components/Home.vue";
 import Projects from "./components/Projects.vue";
 import SiteFooter from "./components/Footer.vue";
@@ -21,7 +19,7 @@ import { IAppData, pageContent } from "./types";
 
 export default {
     name: "App",
-    components: { SiteFooter, SiteHeader, Home, Contact, Projects },
+    components: { SiteFooter, SiteHeader, Home, Projects },
     methods: {
         changePageContent: function (newPage: pageContent) {
             this.pageContent = newPage;

@@ -1,5 +1,5 @@
 <template>
-    <section id="Home">
+    <section id="home">
         <section id="intro">
             <h1>Intro</h1>
             <p>
@@ -29,16 +29,18 @@
                 />
             </div>
         </section>
-        <section>
+        <section id="skills-sections">
             <skill-icons header="Languages" v-bind:skills="languages" />
             <skill-icons header="Technologies" v-bind:skills="skills" />
         </section>
+        <contact />
     </section>
 </template>
 
 <script lang="ts">
 import SkillIcons from "./Skills.vue";
 import PostPreviewCard from "./PostPreviewCard.vue";
+import Contact from "./Contact.vue";
 import { LANGUAGES, MEDIUM_JSON_FEED, SKILLS } from "../content";
 import { IMediumBlogPost, IHomeData } from "../types";
 
@@ -47,6 +49,7 @@ export default {
     components: {
         SkillIcons,
         PostPreviewCard,
+        Contact,
     },
     methods: {
         fetchMediumFeed: async function (): Promise<Array<IMediumBlogPost>> {
@@ -89,8 +92,15 @@ p {
     text-align: start;
 }
 
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #intro {
     width: 50%;
+    min-width: 30rem;
     font-size: 1.6rem;
 }
 
@@ -105,5 +115,9 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+#skills-sections {
+    padding: 3rem 0;
 }
 </style>

@@ -1,9 +1,8 @@
 <template>
     <header id="header">
-        <div id="header-name">Facedrive Foods</div>
-        <div id='header-img-nav'>
-            <div id="header-img">
-            </div>
+        <div id="header-name">Lucas Pau</div>
+        <div id="header-img-nav">
+            <div id="header-img"></div>
             <nav>
                 <div v-on:click="handleNav('Home')">Home</div>
                 <div v-on:click="handleNav('Projects')">Projects</div>
@@ -28,6 +27,7 @@ export default {
 </script>
 
 <style scoped>
+/* below 768 width, make it fixed to top. */
 #header {
     display: flex;
     justify-content: space-around;
@@ -40,12 +40,14 @@ export default {
 }
 
 #header-name {
-    font-size: 10rem;
+    flex-grow: 1;
+    font-size: 9rem;
 }
 
 #header-img-nav {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 #header-img {
     flex-grow: 1;
@@ -60,5 +62,23 @@ nav {
 
 nav div {
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #header-name {
+        padding-top: 4rem;
+        font-size: 5rem;
+    }
+    #header-img-nav {
+        flex-grow: 0;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2rem 0;
+        background-color: black;
+        z-index: 2;
+    }
 }
 </style>

@@ -2,12 +2,12 @@ import { ISkillsIcon, IProjects, IContactInfo } from '../types'
 
 
 export const SKILLS: Array<ISkillsIcon> = [
-    { name: 'Vue', imagePath: require('@/assets/images/vue-icon.svg') },
     { name: 'React', imagePath: require('@/assets/images/react-icon.svg') },
     { name: 'TypeScript', imagePath: require('@/assets/images/ts-logo-128.svg') },
     { name: 'Git', imagePath: require('@/assets/images/git-icon.svg') },
     { name: 'Node.js', imagePath: require('@/assets/images/nodejs-icon.svg') },
     { name: 'Express', imagePath: require('@/assets/images/express-icon.svg') },
+    { name: 'Vue', imagePath: require('@/assets/images/vue-icon.svg') },
     { name: 'Django', imagePath: require('@/assets/images/django-icon.svg') },
     { name: 'Flutter', imagePath: require('@/assets/images/flutter-icon.svg') },
     { name: 'SQL', imagePath: require('@/assets/images/PostgreSQL-icon.svg') },
@@ -18,9 +18,9 @@ export const SKILLS: Array<ISkillsIcon> = [
 export const LANGUAGES: Array<ISkillsIcon> = [
     { name: 'JavaScript', imagePath: require('@/assets/images/javascript-icon.svg') },
     { name: 'Python', imagePath: require('@/assets/images/python-icon.svg') },
-    { name: 'Dart', imagePath: require('@/assets/images/dart-icon.svg') },
     { name: 'HTML5', imagePath: require('@/assets/images/html5-icon.svg') },
     { name: 'CSS3', imagePath: require('@/assets/images/css-icon.svg') },
+    { name: 'Dart', imagePath: require('@/assets/images/dart-icon.svg') },
 ];
 
 export const PROJECTS: Array<IProjects> = [
