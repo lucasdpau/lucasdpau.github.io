@@ -3,8 +3,8 @@
         <a v-bind:href="post.link">
             <!-- <img src=''> -->
             <h3>{{ post.title }}</h3>
-            <div class='post-publish-date'>{{ formatDate }}</div>
-            <div class='post-content'>{{ formatDescription }}</div>
+            <div class="post-publish-date">{{ formatDate }}</div>
+            <div class="post-content">{{ formatDescription }}</div>
         </a>
     </div>
 </template>
@@ -19,7 +19,10 @@ export default {
     },
     computed: {
         formatDescription: function (): string {
-            const truncatedText = `${this.post.description.substring(0,256)}...`;
+            const truncatedText = `${this.post.description.substring(
+                0,
+                256
+            )}...`;
             const regex = /(<([^>]+)>)/gi;
             return truncatedText.replace(regex, "");
         },
@@ -53,14 +56,16 @@ h3 {
 }
 .medium-post-card:hover {
     border-color: black;
+    background-color: lightgray;
+    transition:  0.4s;
 }
 
-.post-publish-date{
+.post-publish-date {
     font-size: 1.4rem;
     color: #333;
 }
 
-.post-content{
+.post-content {
     font-size: 1.6rem;
 }
 </style>

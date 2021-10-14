@@ -3,7 +3,7 @@
         <section id="intro">
             <h1>Intro</h1>
             <p>
-                My name is Lucas Pau, and I'm a self-taught developer and health
+                My name is Lucas, and I'm a self-taught developer and health
                 care professional based in Toronto, Canada. I used to work full
                 time as a pharmacy manager, and although the job was stable I
                 felt that the development of my professional skills and my
@@ -115,6 +115,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    max-width: 1280px;
 }
 
 #skills-sections {

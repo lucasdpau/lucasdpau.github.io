@@ -50,6 +50,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     width: 100px;
     height: 100px;
     font-size: 1.4rem;
@@ -65,6 +66,6 @@ h2 {
     height: 120px;
     width: 100px;
     opacity: 1;
-    transition: 0.05s;
+    transition: 0.1s;
 }
 </style>
