@@ -24,7 +24,7 @@ export const LANGUAGES: Array<ISkillsIcon> = [
 ];
 
 export const PROJECTS: Array<IProjects> = [
-    { name: 'TripCaster', link: 'https://github.com/lucasdpau/tripcaster', liveLink: 'https://tripcaster.herokuapp.com', imagePath: require('@/assets/images/tripcaster1.png'), description: 'TripCaster gathers the forecast for multiple cities onto one page. This project was how I learned React.' },
+    { name: 'TripCaster', link: 'https://github.com/lucasdpau/tripcaster', liveLink: 'https://tripcaster.herokuapp.com', imagePath: require('@/assets/images/tripcaster1.png'), description: 'TripCaster gathers the forecast for multiple cities onto one page. This project was what I used to learn React.' },
     { name: 'TwitterClone', link: 'https://github.com/lucasdpau/twitclone', imagePath: require('@/assets/images/twitclone2b.png'), description: 'Twitter clone I created to practice working with the Django framework. I learned a lot while making this, since it was a challenge getting all the little pieces of the app working together.' },
 ];
 
