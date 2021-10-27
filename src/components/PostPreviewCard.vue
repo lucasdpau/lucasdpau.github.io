@@ -52,6 +52,7 @@ h3 {
     width: 30%;
     border: 1px solid lightgray;
     border-radius: 10px;
+    background-color: white;
     text-align: left;
 }
 .medium-post-card:hover {
