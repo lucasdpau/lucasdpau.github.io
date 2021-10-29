@@ -1,4 +1,4 @@
-export type pageContent = 'Contact' | 'Projects' | 'Home'; 
+export type pageContent = 'Projects' | 'Home'; 
 
 export interface IAppData {
     pageContent: pageContent;
@@ -12,13 +12,28 @@ export interface IMediumBlogPost {
     author: string;
     thumbnail: string;
     description: string;
-    enclosure: any;
+    enclosure: unknown;
     categories: Array<string>;
 }
 
+export interface ISkillsIcon {
+    name: string;
+    imagePath: string;
+}
+
+export interface IProjects extends ISkillsIcon {
+    description: string;
+    link: string;
+    liveLink?: string;
+}
+
+export interface IContactInfo extends ISkillsIcon {
+    link: string;
+}
+
 export interface IHomeData {
-    languages: any;
-    skills: any;
+    languages: Array<ISkillsIcon>;
+    skills: Array<ISkillsIcon>;
     fetchAttempted: boolean;
     posts: Array<IMediumBlogPost>
 }

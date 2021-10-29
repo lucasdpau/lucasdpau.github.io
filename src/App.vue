@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <site-header v-on:changePageEvent="changePageContent($event)" />
-        <main id='page-content'>
+        <main id="page-content">
             <transition name="slide">
                 <component v-bind:is="pageContent" />
             </transition>
@@ -11,7 +11,6 @@
 </template>
 
 <script lang="ts">
-import Contact from "./components/Contact.vue";
 import Home from "./components/Home.vue";
 import Projects from "./components/Projects.vue";
 import SiteFooter from "./components/Footer.vue";
@@ -20,7 +19,7 @@ import { IAppData, pageContent } from "./types";
 
 export default {
     name: "App",
-    components: { SiteFooter, SiteHeader, Home, Contact, Projects },
+    components: { SiteFooter, SiteHeader, Home, Projects },
     methods: {
         changePageContent: function (newPage: pageContent) {
             this.pageContent = newPage;
