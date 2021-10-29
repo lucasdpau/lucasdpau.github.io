@@ -31,6 +31,7 @@ export default {
 <style scoped>
 #projects {
   display: flex;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 .project-item {
@@ -39,6 +40,7 @@ export default {
   gap: 1rem;
   padding: 2rem;
   width: 40rem;
+  max-width: 100vw;
   border: 1px solid black;
   border-radius: 1rem;
   text-align: start;

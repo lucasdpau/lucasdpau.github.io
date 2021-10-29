@@ -95,12 +95,13 @@ p {
 #home {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 #intro {
     width: 50%;
     padding: 2rem 0;
+    margin: 0 auto;
     min-width: 30rem;
     font-size: 1.6rem;
 }
@@ -108,8 +109,11 @@ p {
 #medium-posts {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
     padding-top: 3rem;
+    color: white;
+    background-color: black;
 }
 
 #posts-unavailable {

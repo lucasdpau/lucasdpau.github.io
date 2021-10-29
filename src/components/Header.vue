@@ -2,7 +2,10 @@
   <header id="header">
     <div id="header-name">Lucas Pau</div>
     <div id="header-img-nav">
-      <three-d-canvas />
+      <three-d-canvas 
+        :canvasHeight="300"
+        :canvasWidth="400"
+      />
       <nav>
         <div v-on:click="handleNav('Home')">Home</div>
         <div v-on:click="handleNav('Projects')">Projects</div>

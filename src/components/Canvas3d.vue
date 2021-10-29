@@ -1,13 +1,11 @@
 <template>
-    <canvas id="canvas" ref="3dcanvas" v-bind:style="{height: canvasHeight, width: canvasWidth}"></canvas>
+    <canvas ref="3dcanvas" v-bind:style="{height: canvasHeight, width: canvasWidth}"></canvas>
 </template>
 
 <script lang="ts">
 import * as THREE from "three";
 
 interface IStuff {
-    canvasWidth: number,
-    canvasHeight: number,
     scene: THREE.Scene;
     camera: THREE.Camera;
     renderer: THREE.Renderer;
@@ -15,10 +13,12 @@ interface IStuff {
 }
 
 export default {
+  props: {
+    canvasWidth: Number,
+    canvasHeight: Number
+  },
   data: function (): IStuff {
     return {
-        canvasWidth: 400,
-        canvasHeight: 400,
         scene: new THREE.Scene(),
         camera: new THREE.PerspectiveCamera(),
         renderer: new THREE.WebGLRenderer(),
@@ -60,8 +60,4 @@ export default {
 </script>
 
 <style scoped>
-#canvas {
-  height: 400px;
-  width: 400px;
-}
 </style>
