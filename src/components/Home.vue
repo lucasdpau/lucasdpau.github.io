@@ -113,7 +113,7 @@ p {
     gap: 2rem;
     padding-top: 3rem;
     color: white;
-    background-color: black;
+    background-color: #111;
 }
 
 #posts-unavailable {
