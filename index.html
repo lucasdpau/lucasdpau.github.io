@@ -1,1 +1,251 @@
-<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lucas | Home</title><link href="/dist/css/app.738a4535.css" rel="preload" as="style"><link href="/dist/js/app.5b937d90.js" rel="preload" as="script"><link href="/dist/js/chunk-vendors.11c0ba0d.js" rel="preload" as="script"><link href="/dist/css/app.738a4535.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but this page requires you to enable JavaScript. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/dist/js/chunk-vendors.11c0ba0d.js"></script><script src="/dist/js/app.5b937d90.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Lucas Pau's portfolio page">
+        <!-- http://getbootstrap.com/docs/4.1/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="stylesheet.css" rel="stylesheet">
+        <title>
+		LP's Page
+	</title>
+    </head>
+    <body>
+        <nav> 
+            <a href="#top">
+				Top
+			</a>
+            <a href="#projects">
+				Projects
+			</a>
+            <a href="#skills">
+				Skills
+			</a>
+            <a href="#contact">
+				Contact
+			</a>
+        </nav>
+		<noscript>
+			<div class='noscript'>
+				Looks like you've disabled JavaScript, <a href='./noscript.html'>go here instead.</a>
+			</div>
+		</noscript>
+	<header class="container center landing">
+		<div class="landing_name">
+			<h1>
+				Lucas Pau
+			</h1>
+			<h3>
+				Developer
+			</h3>
+		</div>		
+		<div class="center scroll_from_landing">
+			<a href="#about" class="landing_arrow_down"> ▼	</a>
+		</div>
+	</header>
+	<main>
+		<div class="container center padding65" id="about">
+			<h3>
+				About Me
+			</h3>
+			<div>
+				My name is Lucas Pau, and I'm a self-taught developer and health care worker based in Toronto, Canada. Always willing to learn more and take on a challenge.
+			</div>
+		</div>
+			<div class="container padding65" id="projects">
+				<h3 class="center">
+					My Projects
+				</h3>
+				<div class="project-card-wrapper">
+					<div class="card project-item">
+						<div class="card-body project_content_wrapper">
+							<div class="project-image">
+								<img src="./images/tripcaster1.png">
+							</div>
+							<div>
+								<h4>
+									TripCaster
+								</h4>
+								<p class="card-text">
+									TripCaster lets you get the forecast for multiple cities for the next 14 days all on one page. I used this project as an opportunity to learn React.
+									<br>
+									Utilized: Python, Django, JavaScript, React, HTML/CSS
+								</p>
+							</div>	
+							<div class="project_link_wrapper center">
+								<div>
+									<a href="https://github.com/lucasdpau/tripcaster" class="project-link">
+										<img src="./images/github-icon.svg" class="project-icon">
+										<br>Github
+									</a>
+								</div>
+								<div>
+									<a href="https://tripcaster.herokuapp.com" class="project-link">
+										<img src="./images/heroku-icon.svg" class="project-icon">
+										<br>Live link
+									</a>
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="card project-item">
+						<div class="card-body project_content_wrapper">
+							<div class="project-image">
+								<img src="./images/twitclone2b.png">
+							</div>
+							<div>
+								<h4>
+									Twitclone
+								</h4>
+								<p class="card-text">
+									Twitter clone I created to practice working with the Django framework. I learned a lot while making this, since it was a challenge getting all the little pieces of the app working together.
+									<br>
+									Utilized: Python, Django, PostgreSQL, JavaScript, HTML/CSS
+								</p>
+							</div>	
+							<div class="project_link_wrapper center">
+								<div>
+									<a href="https://github.com/lucasdpau/twitclone" class="project-link">
+										<img src="./images/github-icon.svg" class="project-icon">
+										<br>Github
+									</a>
+								</div>
+								<div>
+									<a href="https://lp-twitclone.herokuapp.com" class="project-link">
+										<img src="./images/heroku-icon.svg" class="project-icon">
+										<br>Live link
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card project-item">
+						<div class="card-body project_content_wrapper">
+							<h4>
+								FoodSens
+							</h4>
+							<p class="card-text">
+								Tracker to log food intake and any health flare-ups you experience, with the goal of finding a correlation between the two.
+								<br>
+								Utilized: JavaScript, MongoDB, Mongoose, Node.js, Express, HTML/CSS
+							</p>
+							<div class="project_link_wrapper center">
+								<div>
+									<a href="https://github.com/lucasdpau/FoodSens" class="project-link">
+										<img src="./images/github-icon.svg" class="project-icon">
+										<br>Github
+									</a>
+								</div>
+								<div>
+									<a href="https://lucas-foodsens.herokuapp.com/" class="project-link">
+										<img src="./images/heroku-icon.svg" class="project-icon">
+										<br>Live link	
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="card project-item">
+					<div class="card-body project_content_wrapper">
+						<div>
+							<h4>
+								StockFeels
+							</h4>
+							<p class="card-text">
+								Journal for stock traders to log their trades and emotions.
+								<br>
+								Utilized: Python, SQLite, Flask, JavaScript, AJAX, HTML/CSS, Bootstrap
+							</p>
+						</div>
+						<div class="project_link_wrapper center">
+							<a href="https://github.com/lucasdpau/stockfeels" class="project-link">
+								<img src="./images/github-icon.svg" class="project-icon">
+								<br>Github 
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="card project-item">
+					<div class="card-body project_content_wrapper">
+						<h4>
+							Drugshortages
+						</h4>
+						<p class="card-text">
+							Developed a simple website that used the drugshortagescanada.ca 
+							API to collect and summarize drug shortage reports
+						</p>
+					</div>
+					<div class="project_link_wrapper center">
+						<a href="https://github.com/lucasdpau/drugshortages" class="project-link">
+							<img src="./images/github-icon.svg" class="project-icon">
+							<br>Github
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container center padding65" id="skills">
+			<h3>
+				Skills
+			</h3>
+			<div class="container">
+				<div class="skills_header">
+					<h5 id="languages">
+						Languages
+					</h5>
+					<p id="language_minimize">[-]</p>
+				</div>
+				<div class="card skills-list-wrapper" id="language-wrapper">
+				</div>
+			</div>
+			<div class="container">
+				<div class="skills_header">
+					<h5 id="techs">
+						Frameworks/Technologies
+					</h5>
+					<p id="techs_minimize">[-]</p>
+				</div>
+				<div class="card skills-list-wrapper" id="techs-wrapper">
+				</div>
+			</div>
+		</div>
+		<div class="container center padding65" id="contact">
+			<h3>Contact</h3>
+			<p>lucasdpau@gmail.com</p>
+			<div class="card contact-list-wrapper">
+				<div class="contact-item">
+					<a href="https://www.linkedin.com/in/lucasdpau/">
+						<img src="./images/linkedin-icon.svg" class="contact-image">
+						<br>LinkedIn
+					</a>
+				</div>
+				<div class="contact-item">
+					<a href="https://github.com/lucasdpau">
+						<img src="./images/github-icon.svg" class="contact-image">
+						<br>GitHub
+					</a>
+				</div>
+				<div class="contact-item">
+					<a href="mailto:lucasdpau@gmail.com">
+						<img src="./images/envelope-icon.svg" class="contact-image">
+						<br>E-mail
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="status-bar invisible" id="iddqdbar">
+			<div class="status-bar-face">
+				<img src="images/slamcraft.jpg" alt="doomguy face">
+			</div>
+		</div>
+	</main>
+	<footer class="center">
+		<div class="container">
+			Thank you for visiting my webpage.
+		</div>
+	</footer>
+    </body>
+	<script src="scripts.js">
+	</script>
+</html>
